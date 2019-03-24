@@ -15,6 +15,10 @@ const programacion ={
     alias: 'p'
 }
 
+const muestraest = {
+    nombre
+}
+
 const creacion ={
     nombre,
     matematicas,
@@ -24,6 +28,9 @@ const creacion ={
 
 const argv = require('yargs')
             .command('crear','Crear un estudiante en el BD', creacion)
+            .command('mostrar','Mostrar los estudiantes y sus notas')
+            .command('mostrarest', 'Muestra información un estudiante', muestraest)
+            .command('mostrarprom','Muestra el promedio de un estudiante dado', muestraest)
             .argv
 
 module.exports={
